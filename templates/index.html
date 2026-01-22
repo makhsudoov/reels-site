@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Private Reels</title>
+    <meta name="description" content="Эксклюзивные игровые моменты. Продолжение в Telegram.">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<header>
+    <h1>🔥 Private Reels</h1>
+    <p>Полные игровые сессии — в Telegram</p>
+    <a href="/go" class="tg-btn">🚀 Перейти в Telegram</a>
+</header>
+
+<section class="reels">
+    {% for reel in reels %}
+    <iframe
+        src="{{ reel }}embed"
+        width="320"
+        height="400"
+        frameborder="0"
+        scrolling="no"
+        allowfullscreen>
+    </iframe>
+    {% endfor %}
+</section>
+
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <h2>🔥 Продолжение внутри</h2>
+        <p>Полные сессии доступны в Telegram</p>
+        <a href="/go" class="tg-btn">Открыть Telegram</a>
+    </div>
+</div>
+
+<footer>
+    <p class="disclaimer">18+. Контент носит развлекательный характер.</p>
+</footer>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
