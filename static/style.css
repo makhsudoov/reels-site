@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0b0b;
+    color: white;
+    text-align: center;
+}
+header { padding: 30px 15px; }
+header h1 { color: #f5c542; }
+.tg-btn {
+    display: inline-block;
+    padding: 14px 24px;
+    background: #229ED9;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.reels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+}
+.popup-content {
+    background: #111;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 300px;
+    margin: 20% auto;
+}
+.disclaimer {
+    font-size: 12px;
+    opacity: 0.6;
+    margin: 20px;
+}
