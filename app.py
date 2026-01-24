@@ -1,13 +1,16 @@
-rom flask import Flask, render_template, redirect, request
+from flask import Flask, render_template, redirect, request
 from datetime import datetime
 
 app = Flask(__name__)
 
-TELEGRAM_LINK = "https://t.me/xbetzone_ms"
+TELEGRAM_LINK = "https://t.me/xbetzone_ms"  # замени на свой Telegram
 
 def load_reels():
-    with open("data/reels.txt", "r") as f:
-        return [line.strip() for line in f if line.strip()]
+    try:
+        with open("data/reels.txt", "r") as f:
+            return [line.strip() for line in f if line.strip()]
+    except:
+        return []
 
 @app.route("/")
 def index():
@@ -21,4 +24,4 @@ def go():
     return redirect(TELEGRAM_LINK)
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0", port=10000)
